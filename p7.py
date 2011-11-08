@@ -1,3 +1,5 @@
+#!/bin/env python
+
 # a fast prime number list 'generator' using a sieve algorithm
 
 def primes(n):
@@ -24,9 +26,10 @@ def primes(n):
     # remove all the zero entries
     return [2] + [x for x in nums if x != 0]
 
+plist = primes(2**17)
 
-print('-' * 50)  # print 50 dashes, cosmetic
-num = 100
-primeList = primes(num)
-print("List of prime numbers from 2 to %d:" % num)
-print(primeList)
+for x, y in enumerate(plist):
+    if x > 9990 and x < 10010:
+        print(x,y)
+
+print(plist[10001])
