@@ -11,7 +11,8 @@ palin = []
 for x in range(min, max, 1):
     for y in range(min, max, 1):
         if ispalindrome(str(x*y)):
-            palin.append(x*y)
+            if not (x*y) in palin:
+                palin.append(x*y)
 
 palin.sort()
 print(palin)
