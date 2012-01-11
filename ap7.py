@@ -29,7 +29,8 @@ def primes(n):
 plist = primes(2**17)
 
 for x, y in enumerate(plist):
-    if x > 9990 and x < 10010:
-        print(x,y)
-
-print(plist[10001])
+    if x+1 > 9997 and x+1 < 10005:
+        if x+1 == 10001:
+            print(x+1,y, '<-- Answer')
+        else:
+            print(x+1,y)
