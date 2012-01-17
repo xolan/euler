@@ -9,4 +9,4 @@ digits = 1000
 while(depth(n[len(n)-1])) < 1000:
 	n.append(fib(n))
 
-print("f(%s) = " % len(n), n[len(n)-1])
+print("f(%s) =" % len(n), n[len(n)-1])
