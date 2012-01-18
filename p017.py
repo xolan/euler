@@ -44,7 +44,10 @@ def numtotext(n):
 			if int(str(n)[1:]) < 20:
 				tmp = nums[int(str(n)[1:])]
 			else:
-				tmp = nums[int(str(n)[1]+'0')] + '-' + nums[int(str(n)[2])]
+				if int(str(n)[2]) == 0:
+					tmp = nums[int(str(n)[1]+'0')]
+				else:
+					tmp = nums[int(str(n)[1]+'0')] + '-' + nums[int(str(n)[2])]
 			return nums[int(str(n)[0])] + ' ' + nums[100] + ' and ' + tmp
 		if n < 20:
 			return nums[n]
