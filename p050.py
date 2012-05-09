@@ -1,4 +1,4 @@
-# a fast prime number list 'generator' using a sieve algorithm
+#!/bin/env python
 
 def primes(n):
     """
@@ -24,9 +24,14 @@ def primes(n):
     # remove all the zero entries
     return [2] + [x for x in nums if x != 0]
 
+def con_sum(prime, primelist, index):
+    sum = 0
+    cou = 0
+    print(primelist[:index])
+    for p in primelist[:index]:
+        pass
 
-print('-' * 50)  # print 50 dashes, cosmetic
-num = 1000000
-primeList = primes(num)
-print("List of prime numbers from 2 to %d:" % num)
-print(primeList)
+if __name__ == '__main__':
+    pl = primes(50)
+    for x, p in enumerate(pl):
+        con_sum(p, pl, x)
