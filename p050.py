@@ -24,14 +24,22 @@ def primes(n):
     # remove all the zero entries
     return [2] + [x for x in nums if x != 0]
 
+highest = 0
+
 def con_sum(prime, primelist, index):
+    global highest
     sum = 0
     cou = 0
-    print(primelist[:index])
     for p in primelist[:index]:
-        pass
+        if sum < prime:
+            sum += p
+            cou += 1
+
+    if sum == prime and cou >= highest:
+        highest = prime
+        print(prime, sum, cou)
 
 if __name__ == '__main__':
-    pl = primes(50)
+    pl = primes(1000000)
     for x, p in enumerate(pl):
         con_sum(p, pl, x)
